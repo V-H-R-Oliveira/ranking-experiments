@@ -1,0 +1,99 @@
+.title {
+    font-size: 2rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-5 {
+    margin-top: 5%;
+}
+
+.mt-2 {
+    margin-top: 2%;
+}
+
+.mt-0 {
+    margin-top: 0;
+}
+
+.mb-5 {
+    margin-bottom: 5%;
+}
+
+.mb-2 {
+    margin-bottom: 2%;
+}
+
+.input {
+    border: none;
+    font-size: 1.2rem;
+    border-bottom: 1px solid black;
+    text-overflow: ellipsis;
+}
+
+.input:focus{
+    outline: none;
+}
+
+.bordered-form {
+    border: 1px solid black;
+    padding: 1em 5em;
+}
+
+.centered-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.label, .label-select {
+    text-align: justify;
+    font-size: 1.2rem;
+}
+
+.label-select {
+    padding-right: 3.2em;
+}
+
+.select {
+    max-width: 100%;
+    min-width: 100%;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.btn {
+    border: 1px solid black;
+    cursor: pointer;
+    padding: 1em 2em;
+    font-size: 1rem;
+}
+
+.centered-btn {
+    display: block;
+    margin: 0 auto;
+}
+
+.score-list {
+    list-style-type: decimal;
+}
+
+.corpus-list {
+    list-style-type: disc;
+    margin-top: 0;
+}
+
+.query, .strategy, .score {
+    font-size: 1.5rem;
+}
+
+.score {
+    margin: 1em 0;
+}
+
+.score:first {
+    margin: 0;
+}
