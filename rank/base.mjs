@@ -10,14 +10,6 @@ class BaseScorer {
     showTopN(response, n = this.topN) {
         return response.slice(0, n)
     }
-
-    fit() {
-        throw new Error("Not implemented")
-    }
-
-    search(query, strategy) {
-        throw new Error("Not implemented")
-    }
 }
 
 export default BaseScorer
