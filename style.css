@@ -69,10 +69,11 @@
 }
 
 .btn {
-    border: 1px solid black;
     cursor: pointer;
     padding: 1em 2em;
     font-size: 1rem;
+    border: none;
+    background-color: gainsboro;
 }
 
 .centered-btn {
