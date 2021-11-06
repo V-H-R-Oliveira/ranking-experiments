@@ -14,16 +14,21 @@
     <body>
         <main>
             <div class="centered-container">
-                <h2 class="title text-center mt-0">Corpus</h2>
-                <ul class="corpus-list mb-2" id="corpus">
-                </ul>
+                <h2 class="title text-center mt-0">Text search</h2>
             </div>
             <div class="centered-container">
                 <form id="search-form" class="bordered-form">
                     <div class="mt-5 mb-5">
+                        <label class="label-select" for="corpus">Corpus:</label>
+                        <select class="select mt-2" id="corpus">
+                            <option value="bible-en" selected>English bible corpus</option>
+                            <option value="dummy-corpus">Fake random corpus</option>
+                        </select>
+                    </div>
+
+                    <div class="mt-5 mb-5">
                         <label class="label" for="query">Query:</label>
-                        <input type="text" class="input" id="query" value="The intersection of graph survey and trees"
-                            placeholder="Enter a query..." required />
+                        <input type="text" class="input" id="query" value="" placeholder="Enter a query..." required />
                     </div>
                     <div class="mt-5 mb-5">
                         <label class="label-select" for="ranking-algorithm">Algorithm:</label>
@@ -41,24 +46,24 @@
                             <option value="adjustedFrequency">Adjusted frequency</option>
                         </select>
                     </div>
-                    <div class="mt-5 mb-5">
+                    <div class="mt-5 mb-5 hidden">
                         <label class="label" for="k1">K1:</label>
                         <input type="text" value="1.2" id="k1" />
                     </div>
-                    <div class="mt-5 mb-5">
+                    <div class="mt-5 mb-5 hidden">
                         <label class="label" for="b">B:</label>
                         <input type="text" value="0.75" id="b" />
                     </div>
                     <button class="btn centered-btn" type="submit">Search</button>
                 </form>
             </div>
-            <div class="centered-container">
+            <div id="result" class="centered-container">
                 <h2 class="title text-center">Result:</h2>
-                <ul class="score-list" id="score">
+                <ul class="score-list centered-container" id="score">
                 </ul>
             </div>
         </main>
-        <script type="module" src="ranking.js"></script>
+        <script type="module" src="./main.js"></script>
     </body>
 
 </html>

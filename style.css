@@ -2,6 +2,10 @@
     font-size: 2rem;
 }
 
+.subtitle {
+    font-size: 1.2rem;
+}
+
 .text-center {
     text-align: center;
 }
@@ -59,8 +63,7 @@
 }
 
 .select {
-    max-width: 100%;
-    min-width: 100%;
+    width: 100%;
     font-size: 1.2rem;
     cursor: pointer;
 }
@@ -79,6 +82,10 @@
 
 .score-list {
     list-style-type: decimal;
+    margin-top: 0;
+    max-width: 100%;
+    min-width: 50%;
+    width: 50%;
 }
 
 .corpus-list {
@@ -96,4 +103,8 @@
 
 .score:first {
     margin: 0;
+}
+
+.hidden {
+    display: none;
 }

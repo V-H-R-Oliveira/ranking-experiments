@@ -1,5 +1,6 @@
 import BaseScorer from "./base.mjs"
 import { getTermsFrequencyMap, getArraySum } from "../utils/utils.mjs"
+import { LOG_TF, BIN_TF, FREQ_TF, ADJUST_FREQ_TF } from "../utils/constants.mjs"
 
 class TfIdf extends BaseScorer {
     constructor(corpus, topN = 5) {
@@ -52,11 +53,10 @@ class TfIdf extends BaseScorer {
             this.documentsFrequencyMap.set(documentIdx, documentFrequencyMap)
         }
 
-        this.tfStrategiesMap.set("log", this.#logStrategy)
-        this.tfStrategiesMap.set("binary", this.#booleanStrategy)
-        this.tfStrategiesMap.set("frequency", this.#rawFrequencyStrategy)
-        this.tfStrategiesMap.set("adjustedFrequency", this.#adjustedFrequencyStrategy)
-
+        this.tfStrategiesMap.set(LOG_TF, this.#logStrategy)
+        this.tfStrategiesMap.set(BIN_TF, this.#booleanStrategy)
+        this.tfStrategiesMap.set(FREQ_TF, this.#rawFrequencyStrategy)
+        this.tfStrategiesMap.set(ADJUST_FREQ_TF, this.#adjustedFrequencyStrategy)
     }
 
     search(query, strategy) {
